@@ -328,7 +328,10 @@ if(!Array.indexOf){
       $('div#quizy-game-summary').css({top:yMid+'px',left:xMid+'px'});
       // adds a click event to the summary div to be removed on click
       $('div#quizy-game-summary').click(function(){
-        $(this).remove();
+        // $(this).remove();
+        //alert("thank.html");
+        // val url = "thank.html";
+        window.open("thank.html", "_target");
       });
     }
     
@@ -369,7 +372,7 @@ if(!Array.indexOf){
                          
   ****************************************************************************/
   
-  $.fn.quizyMemoryGame.defaults = {itemWidth: 156, itemHeight: 156, itemsMargin:10, colCount:4, animType:'scroll', animSpeed:250, openDelay:1500, flipAnim:'rl', resultIcons:true, gameSummary:true, textSummaryTitle:'Here is you score', textSummaryClicks:'clicks', textSummaryTime:'seconds', onFinishCall:'function(param){alert(param.clicks)}'}
+  $.fn.quizyMemoryGame.defaults = {itemWidth: 156, itemHeight: 156, itemsMargin:10, colCount:4, animType:'scroll', animSpeed:250, openDelay:400, flipAnim:'rl', resultIcons:true, gameSummary:true, textSummaryTitle:'Here is you score', textSummaryClicks:'clicks', textSummaryTime:'seconds', onFinishCall:''}
   
   
 })(jQuery);
