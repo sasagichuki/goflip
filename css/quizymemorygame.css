@@ -3,6 +3,10 @@
  Author: Yane Frenski
 */
 
+.heady{
+  width: 780px;
+  margin: 0 auto;
+}
 /* the stle for the wrapper element */
 .quizy-memorygame{
   position:relative;
