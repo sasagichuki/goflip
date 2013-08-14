@@ -328,10 +328,10 @@ if(!Array.indexOf){
       $('div#quizy-game-summary').css({top:yMid+'px',left:xMid+'px'});
       // adds a click event to the summary div to be removed on click
       $('div#quizy-game-summary').click(function(){
-        // $(this).remove();
+        $(this).remove();
         //alert("thank.html");
         // val url = "thank.html";
-        window.open("thank.html", "_target");
+        // window.open("thank.html", "_target");
       });
     }
     
