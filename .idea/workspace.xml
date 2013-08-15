@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82978f02-a0de-41e7-8860-6bfd80ce2381" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/score_pg.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goflip.sql" afterPath="$PROJECT_DIR$/goflip.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.quizymemorygame.js" afterPath="$PROJECT_DIR$/js/jquery.quizymemorygame.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/score.php" afterPath="$PROJECT_DIR$/score.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/score_pg.php" afterPath="$PROJECT_DIR$/score_pg.php" />
     </list>
     <ignored path="goflip.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,19 +42,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.quizymemorygame.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="jquery.quizymemorygame.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/jquery.quizymemorygame.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="385" column="142" selection-start="14294" selection-end="14294" vertical-scroll-proportion="0.765625">
+            <state line="385" column="142" selection-start="14294" selection-end="14294" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="score_pg.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="score_pg.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/score_pg.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="64" selection-start="810" selection-end="810" vertical-scroll-proportion="-8.0">
+            <state line="6" column="0" selection-start="91" selection-end="231" vertical-scroll-proportion="0.16304348">
               <folding>
                 <element signature="e#6#28#0" expanded="true" />
               </folding>
@@ -90,10 +88,10 @@
         <option value="$PROJECT_DIR$/backup.php" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/score.php" />
         <option value="$PROJECT_DIR$/js/jquery.quizymemorygame.js" />
         <option value="$PROJECT_DIR$/goflip.sql" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/score.php" />
         <option value="$PROJECT_DIR$/score_pg.php" />
       </list>
     </option>
@@ -358,30 +356,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="44" selection-start="3393" selection-end="3393" vertical-scroll-proportion="-11.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="81" column="19" selection-start="1615" selection-end="1615" vertical-scroll-proportion="0.8726655">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/score.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="70" selection-start="0" selection-end="1033" vertical-scroll-proportion="-1.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="29" selection-start="1504" selection-end="1504" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -393,19 +370,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/score_pg.php">
+    <entry file="file://$PROJECT_DIR$/js/jquery.quizymemorygame.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="64" selection-start="810" selection-end="810" vertical-scroll-proportion="-8.0">
-          <folding>
-            <element signature="e#6#28#0" expanded="true" />
-          </folding>
+        <state line="385" column="142" selection-start="14294" selection-end="14294" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery.quizymemorygame.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="385" column="142" selection-start="14294" selection-end="14294" vertical-scroll-proportion="0.765625">
+        <state line="87" column="44" selection-start="3393" selection-end="3393" vertical-scroll-proportion="-11.25">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/score.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="199" selection-start="951" selection-end="951" vertical-scroll-proportion="0.70652175">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="29" selection-start="1504" selection-end="1504" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/score_pg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="91" selection-end="231" vertical-scroll-proportion="0.16304348">
+          <folding>
+            <element signature="e#6#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

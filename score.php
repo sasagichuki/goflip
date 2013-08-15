@@ -24,7 +24,7 @@ $stack = array();
 
 if ($aData) {
     while($row = mysql_fetch_array($aData)) {
-        $jsonObj = array('user_name' => $row['user_name'], 'email' => $row['email'], 'phone_number' => $row['phone_number'], 'total_clicks' => $row['total_clicks'], 'total_time' => $row['total_time'], );
+        $jsonObj = array('user_name' => $row['user_name'], 'email' => $row['email'], 'phone_number' => $row['phone_number'], 'total_clicks' => $row['total_clicks'], 'total_time' => $row['total_time'] );
         array_push($stack, $jsonObj);
     }
 }

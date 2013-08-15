@@ -35,7 +35,7 @@ $stack = array();
 
 if ($aData) {
     while($row = pg_fetch_row($aData)) {
-        $jsonObj = array('user_name' => $row['user_name'], 'email' => $row['email'], 'phone_number' => $row['phone_number'], 'total_clicks' => $row['total_clicks'], 'total_time' => $row['total_time'], );
+        $jsonObj = array('user_name' => $row[1], 'email' => $row[2], 'phone_number' => $row[3], 'total_clicks' => $row[4], 'total_time' => $row[5] );
         array_push($stack, $jsonObj);
     }
 }
