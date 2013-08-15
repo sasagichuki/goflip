@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
-$user = "";
-$password = "";
+$user = "root";
+$password = "phoenix";
 $database = "goflip";
 
 mysql_connect($host, $user, $password) or die(mysql_error());
@@ -18,12 +18,17 @@ $resource = mysql_query("INSERT INTO users(user_name, email, phone_number, total
 
 
 // obtain data from database
-$aData = mysql_query("SELECT * FROM 'users' ORDER BY 'total_time' DESC LIMIT 0, 10");
+$aData = mysql_query("SELECT * FROM users ORDER BY total_time ASC LIMIT 0, 10");
 
-if (count($aData)) {
-    echo json_encode(array('data' => $aData));
-} else {
-    echo json_encode(array('data' => 'Nothing found'));
+$stack = array();
+
+if ($aData) {
+    while($row = mysql_fetch_array($aData)) {
+        $jsonObj = array('user_name' => $row['user_name'], 'email' => $row['email'], 'phone_number' => $row['phone_number'], 'total_clicks' => $row['total_clicks'], 'total_time' => $row['total_time'], );
+        array_push($stack, $jsonObj);
+    }
 }
+
+echo json_encode($stack);
 
 ?>
