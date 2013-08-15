@@ -383,7 +383,7 @@ var numSeconds = 0;
                          
   ****************************************************************************/
   
-  $.fn.quizyMemoryGame.defaults = {itemWidth: 156, itemHeight: 156, itemsMargin:10, colCount:4, animType:'scroll', animSpeed:250, openDelay:400, flipAnim:'rl', resultIcons:true, gameSummary:true, textSummaryTitle:'Here is you score', textSummaryClicks:'clicks', textSummaryTime:'seconds', onFinishCall:''}
+  $.fn.quizyMemoryGame.defaults = {itemWidth: 156, itemHeight: 156, itemsMargin:10, colCount:4, animType:'scroll', animSpeed:250, openDelay:1500, flipAnim:'rl', resultIcons:true, gameSummary:true, textSummaryTitle:'Here is you score', textSummaryClicks:'clicks', textSummaryTime:'seconds', onFinishCall:''}
   
   
 })(jQuery);

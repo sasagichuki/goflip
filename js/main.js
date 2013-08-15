@@ -48,7 +48,7 @@ $(document).ready(function() {
             $.ajax({
                 type:"POST",
                 dataType: "json",
-                url:"score.php",
+                url:"score_pg.php",
                 data: { user_name: self.user_name(), email: self.email(), phone_number: self.phone_number(), total_clicks: self.total_clicks(), total_time: self.total_time()},
                 success:function (data) {
                     if (_.isArray(data)) {
