@@ -46,15 +46,15 @@
                   x</button>
               <h3>Save Your Score</h3>
               <div><span>Total Clicks: </span><span id="clicks-span"></span></div>
-              <div><span>Total Time: </span><span id="time-span"></span><span>seconds</span></div>
+              <div><span>Total Time: </span><span id="time-span"></span><span> seconds</span></div>
           </div>
           <form class="modal-form form-horizontal" data-bind="submit: saveScore">
               <div class="modal-body">
                   <fieldset>
                       <div class="control-group">
-                          <label class="control-label" for="name">Name</label>
+                          <label class="control-label" for="user_name">Name</label>
                           <div class="controls">
-                              <input id="name" class="input-medium" name="name" type="text" data-bind="value: name" required="required">
+                              <input id="user_name" class="input-medium" name="user_name" type="text" data-bind="value: user_name" required="required">
                           </div>
                       </div>
                       <div class="control-group">
@@ -76,6 +76,30 @@
                   <input class="btn btn-success" type="submit" value="Save">
               </div>
           </form>
+      </div>
+
+      <div id="leaderboard-modal" class="modal hide fade">
+
+          <div class="modal-header">
+              <button class="close" type="button" data-dismiss="modal">
+                  x</button>
+              <h3>Leader Board</h3>
+          </div>
+          <table>
+              <thead>
+                <tr><th>Name</th><th>Total Clicks</th><th>Total Time</th></tr>
+              </thead>
+              <tbody data-bind="foreach: users">
+                  <tr>
+                      <td data-bind="text: user_name"></td>
+                      <td data-bind="text: total_clicks"></td>
+                      <td data-bind="text: total_time"></td>
+                  </tr>
+              </tbody>
+          </table>
+          <div class="modal-footer">
+              <a class="btn" data-dismiss="modal" href="#">Close</a>
+          </div>
       </div>
 
     <div class="heady">
@@ -170,6 +194,8 @@
   <script src="js/knockout.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/bootbox.min.js"></script>
+  <script src="js/underscore-min.js"></script>
+  <script src="js/jsclass.js"></script>
   <script src="js/main.js"></script>
   
   <script>

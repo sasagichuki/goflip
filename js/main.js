@@ -1,48 +1,84 @@
 $(document).ready(function() {
 
+    var User = JS.Class({
+        construct: function (data) {
+            var self = this;
+
+            self.user_name = data.user_name;
+            self.email = ko.observable(data.email);
+            self.phone_number = ko.observable(data.phone_number);
+            self.total_clicks = ko.observable(data.total_clicks);
+            self.total_time = ko.observable(data.total_time);
+        },
+
+        toJSON: function() {
+            var _struct = {
+                "user_name" : this.user_name(),
+                "email" : this.email(),
+                "phone_number" : this.phone_number(),
+                "total_clicks" : this.total_clicks(),
+                "total_time" : this.total_time()
+            };
+            return _struct;
+        }
+
+    });
+
 
     function GameApplication() {
         var self = this;
 
-        self.name = ko.observable();
+        self.user_name = ko.observable();
         self.email = ko.observable();
         self.phone_number = ko.observable();
         self.total_clicks = ko.observable();
-        self.time = ko.observable();
+        self.total_time = ko.observable();
+        self.users = ko.observableArray();
 
 
 
         self.saveScore = function() {
 
-            self.name($('#name').val());
+            self.user_name($('#user_name').val());
             self.email($('#email').val());
             self.phone_number($('#phone_number').val());
             self.total_clicks(numTotalClicks);
-            self.time(numSeconds);
+            self.total_time(numSeconds);
+//
+//            console.log("Name: " + self.user_name());
+//            console.log("Email: " + self.email());
+//            console.log("Phone Number: " + self.phone_number());
+//            console.log("Clicks: " + self.total_clicks());
+//            console.log("Time: " + self.total_time());
 
-            console.log("Name: " + self.name());
-            console.log("Email: " + self.email());
-            console.log("Phone Number: " + self.phone_number());
-            console.log("Clicks: " + self.total_clicks());
-            console.log("Time: " + self.time());
-
-//            $.ajax({
-//                type:"POST",
-//                dataType: "json",
-//                url:"/score.php",
-//                success:function (data) {
-//                    if (_.isArray(data)) {
-//                        var models = [];
-//                        _.each(data, function (item) {
-//                            if(item.misspelt) {
-//                                models.push(new Subscription(item));
-//                            }
-//                        });
-//                        self.misspelt(models);
-//                    }
-//                }
-//            });
+            $.ajax({
+                type:"POST",
+                dataType: "json",
+                url:"score.php",
+                data: { user_name: self.user_name(), email: self.email(), phone_number: self.phone_number(), total_clicks: self.total_clicks(), total_time: self.total_time()},
+                success:function (data) {
+                    console.log(">>>>>> " + data);
+                    console.log(">>>>>> " + data.user_name);
+                    console.log(">>>>>> " + data['email']);
+                    if (_.isArray(data)) {
+                        console.log("isarray");
+                        var all_users = [];
+                        _.each(data, function (item) {
+                            all_users.push(new User(item));
+                        });
+                        self.users(all_users);
+                        console.log(self.users()[0]);
+                        console.log(self.users()[0].user_name);
+                    }
+                    $('#score-modal').modal('hide');
+                    $('#leaderboard-modal').modal('show');
+                }
+            });
         };
+
+//        self.showLeaderboard = function() {
+//            $('#score-modal').modal('show');
+//        };
 
 //        When game ends modal appears
 //        If score and time isnt accessible here then place them in hidden field
@@ -79,10 +115,10 @@ $(document).ready(function() {
 //                });
 //        };
 
-        self.closeModal = function(modal, msg) {
-            $(modal).modal('hide');
-            bootbox.alert(msg);
-        };
+//        self.closeModal = function(modal, msg) {
+//            $(modal).modal('hide');
+//            bootbox.alert(msg);
+//        };
 
     }
 
