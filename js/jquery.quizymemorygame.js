@@ -15,6 +15,11 @@ if(!Array.indexOf){
   }
 }
 
+// keeps the number of clicks in general
+var numTotalClicks = 0;
+
+var numSeconds = 0;
+
 
 (function($) {
   $.fn.quizyMemoryGame = function(options) {
@@ -47,12 +52,12 @@ if(!Array.indexOf){
     // keeps the number of clicks for a turn - it can be 0, 1 or 2
     var numClicks = 0;
     
-    // keeps the number of clicks in general
-    var numTotalClicks = 0;
+//    // keeps the number of clicks in general
+//    var numTotalClicks = 0;
     
     // keep the numer of matches and the number of seconds for the summary
     var numMatches = 0;
-    var numSeconds = 0;
+//    var numSeconds = 0;
     
     // a timer variable
     var gameTimer;
@@ -102,20 +107,26 @@ if(!Array.indexOf){
           if(numMatches == itemsNum/2){
             // removes the timer
             clearInterval(gameTimer);
+              $('#clicks-span').html(numTotalClicks);
+              $('#time-span').html(numSeconds);
+              $('#score-modal').modal('show');
+//              alert("Time " + numSeconds + opts.textSummaryTime + "Clicks " + numTotalClicks + opts.textSummaryClicks);
+              //--------------------------------------------------------------------------------------------
             // if game summary is set, adds the info to it and shows it.
-            if(opts.gameSummary){
-              $('div#quizy-game-summary').
-                  children('div#gs-column2').
-                  html(numSeconds+'<br>'+opts.textSummaryTime);
-              $('div#quizy-game-summary').
-                  children('div#gs-column3').
-                  html(numTotalClicks+'<br>'+opts.textSummaryClicks);
-              $('div#quizy-game-summary').delay(2000).fadeIn(1000);
-            }
-            // if is set makes an AJAX call and sends the the necessary params
-            if(opts.onFinishCall!=''){
-              opts.onFinishCall({ clicks: numTotalClicks, time: numSeconds } );
-            }
+//            if(opts.gameSummary){
+//              $('div#quizy-game-summary').
+//                  children('div#gs-column2').
+//                  html(numSeconds+'<br>'+opts.textSummaryTime);
+//              $('div#quizy-game-summary').
+//                  children('div#gs-column3').
+//                  html(numTotalClicks+'<br>'+opts.textSummaryClicks);
+//              $('div#quizy-game-summary').delay(2000).fadeIn(1000);
+//            }
+//            // if is set makes an AJAX call and sends the the necessary params
+//            if(opts.onFinishCall!=''){
+//              opts.onFinishCall({ clicks: numTotalClicks, time: numSeconds } );
+//            }
+              //------------------------------------------------------------------------------------------
           }
         // if they dont have the same class = WE DON'T HAVE a match
         }else{
