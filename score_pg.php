@@ -24,7 +24,7 @@ $res = pg_query($con, $quer) or die("Cannot execute query: $quer\n");
 $query = "INSERT INTO users(user_name, email, phone_number, total_clicks, total_time) VALUES ('$user_name', '$email', '$phone_number', '$total_clicks', '$total_time')";
 $rs = pg_query($con, $query) or die("Cannot execute query: $query\n");
 
-$query2 = "SELECT * FROM users ORDER BY total_time ASC LIMIT 0, 10";
+$query2 = "SELECT * FROM users ORDER BY total_time ASC LIMIT 10";
 
 $aData = pg_query($con, $query2) or die("Cannot execute query: $query2\n");
 $row = pg_fetch_row($aData);
