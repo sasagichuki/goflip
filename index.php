@@ -15,8 +15,8 @@
     }
     
     #memorygame{
-      margin:auto;
-      width:780px;
+      margin:0 auto;
+      width:100%;
     }
     
     .text-style1{
@@ -124,7 +124,8 @@
   <script src="js/jquery.quizymemorygame.js"></script>
   
   <script>
-    $('#memorygame').quizyMemoryGame({itemWidth: 150, itemHeight: 150, itemsMargin:20, colCount:4, animType:'flip' , flipAnim:'tb', animSpeed:200, resultIcons:true });
+  $('#memorygame').quizyMemoryGame({itemWidth: 150, itemHeight: 150, itemsMargin:20, colCount:4, animType:'flip' , flipAnim:'tb', animSpeed:200, resultIcons:true });
+    // $('#memorygame').quizyMemoryGame({itemWidth: 150, itemHeight: 150, itemsMargin:20, colCount:4, animType:'flip' , flipAnim:'tb', animSpeed:200, resultIcons:true });
   </script>
 
 </body>
