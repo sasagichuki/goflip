@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
-$user = "root";
-$password = "phoenix";
+$user = "";
+$password = "";
 $database = "goflip";
 
 mysql_connect($host, $user, $password) or die(mysql_error());
